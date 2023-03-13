@@ -8,7 +8,7 @@ app.use(express.json())
 
 // Connection URL
 const url = 'mongodb://localhost:27017';
-const client = new MongoClient(url);
+const client = new MongoClient(process.env.MONGODB_URI);
 
 let dbConnection
 let uri = process.env.MONGODB_URI
